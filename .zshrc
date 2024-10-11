@@ -156,8 +156,9 @@ _fzf_compgen_dir() {
   fd --type=d --hidden --exclude .git . "$1"
 }
 
-show_file_or_dir_preview="if [ -d {} ]; then eza --tree --level=3 --color=always --icons=always {} | head -200; else bat -n --color=always --line-range :500 {}; fi"
-export FZF_CTRL_T_OPTS="--preview '$show_file_or_dir_preview'"
+# show_file_or_dir_preview="if [ -d {} ]; then eza --tree --level=3 --color=always --icons=always {} | head -200; else bat -n --color=always --line-range :500 {}; fi"
+previewOrDir="/home/thager/Desktop/Scripts/fzf-preview.sh {}"
+export FZF_CTRL_T_OPTS="--preview '$previewOrDir'"
 export FZF_ALT_C_OPTS="--preview 'eza --tree --level=3 --color=always --icons=always {} | head -200'"
 
 # Fzf color scheme
@@ -166,9 +167,10 @@ export FZF_DEFAULT_OPTS=" \
 --color=fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f5e0dc \
 --color=marker:#b4befe,fg+:#cdd6f4,prompt:#cba6f7,hl+:#f38ba8 \
 --color=selected-bg:#45475a \
---preview '$show_file_or_dir_preview' \
+--bind='ctrl-o:become(vim {+})' \
 --multi" 
 
+alias fzp="fzf --preview '$previewOrDir'"
 
 # Fzf config to denote a command to run for a file type
 
@@ -181,6 +183,6 @@ _fzf_comprun(){
     z)            fzf --preview 'eza --tree --level=3 --color=always --icons=always {} | head -200' "$@" ;;
     export|unset) fzf --preview "eval 'echo $'{}"   "$@" ;;
     ssh)          fzf --preview 'dig {}'            "$@" ;;
-    *)            fzf --preview "$show_file_or_dir_preview" "$@" ;;
+    *)            fzf --preview "$previewOrDir" "$@" ;;
   esac
 }
