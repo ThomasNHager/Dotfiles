@@ -77,13 +77,14 @@ export ZSH="$HOME/.oh-my-zsh"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
+ZVM_INIT_MODE=sourcing 
 plugins=(git)
 plugins+=(zsh-vi-mode)
 plugins+=(zsh-syntax-highlighting)
 plugins+=(zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
-
+source /home/thager/.oh-my-zsh/custom/plugins/zsh-vi-mode/zsh-vi-mode.plugin.zsh
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -138,9 +139,6 @@ export PATH="/usr/bin/python3:$PATH"
 # export PATH="/usr/local/bin:$PATH" 
 # export PATH="/home/thager/.local/bin:$PATH" 
 
-# Add fzf terminal keybinds
-eval "$(fzf --zsh)"
-
 # Use fd instead of fzf
 export FZF_DEFAULT_COMMAND="fd --hidden --strip-cwd-prefix --exclude .git"
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
@@ -186,3 +184,6 @@ _fzf_comprun(){
     *)            fzf --preview "$previewOrDir" "$@" ;;
   esac
 }
+
+# Set up fzf key bindings and fuzzy completion
+source <(fzf --zsh)

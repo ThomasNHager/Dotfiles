@@ -380,7 +380,7 @@ autocmd User LspSetup call LspAddServer(lspServers)
 
 "Vimcomplete
 let g:vimcomplete_tab_enable = 1
-let vcoptions = #{noNewlineInCompletion: v:false, noNewlineInCompletionEver: v:false, vimcomplete-lsp-enable: v:true}
+let vcoptions = #{vimcomplete-lsp-enable: v:true}
 autocmd VimEnter * call g:VimCompleteOptionsSet(vcoptions)
 
 
