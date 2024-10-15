@@ -116,7 +116,6 @@ alias baloosearch6="baloosearch"
 # alias vim="/home/linuxbrew/.linuxbrew/Cellar/vim/9.1.0700/bin/vim"
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-eval "$(zoxide init zsh)"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -169,6 +168,7 @@ export FZF_DEFAULT_OPTS=" \
 --multi" 
 
 alias fzp="fzf --preview '$previewOrDir'"
+export _ZO_FZF_OPTS="--height=~40% --preview 'eza --git-ignore --all --tree --level=3 --color=always --icons=always {2} | head -200'"
 
 # Fzf config to denote a command to run for a file type
 
@@ -187,3 +187,4 @@ _fzf_comprun(){
 
 # Set up fzf key bindings and fuzzy completion
 source <(fzf --zsh)
+eval "$(zoxide init zsh)"
