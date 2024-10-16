@@ -188,3 +188,5 @@ _fzf_comprun(){
 # Set up fzf key bindings and fuzzy completion
 source <(fzf --zsh)
 eval "$(zoxide init zsh)"
+alias cd="z"
+alias ls="eza --color=always --icons=always"
