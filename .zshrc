@@ -190,3 +190,6 @@ source <(fzf --zsh)
 eval "$(zoxide init zsh)"
 alias cd="z"
 alias ls="eza --color=always --icons=always"
+alias cat="bat"
+
+eval $(thefuck --alias)
