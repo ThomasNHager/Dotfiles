@@ -167,7 +167,16 @@ export FZF_DEFAULT_OPTS=" \
 --bind='ctrl-o:become(vim {+})' \
 --multi" 
 
-alias fzp="fzf --preview '$previewOrDir'"
+# alias fzp="fzf --preview '$previewOrDir'"
+function fzp {
+  selection=($(fzf --preview '$previewOrDir'))
+  if [ -d "$selection" ]; then
+    z "$selection"
+  else
+    vim "$selection"
+  fi
+}
+
 export _ZO_FZF_OPTS="--height=~40% --preview 'eza --git-ignore --all --tree --level=3 --color=always --icons=always {2} | head -200'"
 
 # Fzf config to denote a command to run for a file type
