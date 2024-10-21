@@ -461,9 +461,12 @@ let g:lightline#bufferline#show_number = 1
 let g:lightline#bufferline#shorten_path = 0
 let g:lightline#bufferline#unnamed = '[No Name]'
 
-let g:lightline.tabline = {'left': [['buffers']]}
+let g:lightline.tabline = {'left': [['buffers' ]],
+                        \ 'right': [['tabs']]
+            \ }
 let g:lightline.component_expand = {'buffers': 'lightline#bufferline#buffers'}
 let g:lightline.component_type = {'buffers': 'tabsel'}
+let g:lightline#bufferline#enable_devicons = 1
 
 let g:lightline.separator = { 'left': "\ue0b0", 'right': "\ue0b2" }
 let g:lightline.subseparator = { 'left': "\ue0b1", 'right': "\ue0b3" }
@@ -480,6 +483,9 @@ highlight HighlightedyankRegion guibg=#585b70
 
 "Startify
 let g:startify_enable_unsafe = 1
+function! StartifyEntryFormat()
+    return 'WebDevIconsGetFileTypeSymbol(absolute_path) ." ". entry_path'
+endfunction
 
 "Carbon now
 vnoremap <F6> :CarbonNowSh"<CR>

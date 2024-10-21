@@ -77,14 +77,14 @@ export ZSH="$HOME/.oh-my-zsh"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-ZVM_INIT_MODE=sourcing 
 plugins=(git)
-plugins+=(zsh-vi-mode)
+# ZVM_INIT_MODE=sourcing 
+# plugins+=(zsh-vi-mode)
+# source /home/thager/.oh-my-zsh/custom/plugins/zsh-vi-mode/zsh-vi-mode.plugin.zsh
 plugins+=(zsh-syntax-highlighting)
 plugins+=(zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
-source /home/thager/.oh-my-zsh/custom/plugins/zsh-vi-mode/zsh-vi-mode.plugin.zsh
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -167,11 +167,12 @@ export FZF_DEFAULT_OPTS=" \
 --bind='ctrl-o:become(vim {+})' \
 --multi" 
 
-# alias fzp="fzf --preview '$previewOrDir'"
-function fzp {
-  selection=($(fzf --preview '$previewOrDir'))
+alias fzp="fzf --preview '$previewOrDir'"
+function fze {
+  local selection
+  selection=$(fzf --preview '$previewOrDir')
   if [ -d "$selection" ]; then
-    z "$selection"
+    cd "$selection"
   else
     vim "$selection"
   fi
