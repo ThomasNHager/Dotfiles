@@ -133,10 +133,13 @@ function yy() {
 	fi
 	rm -f -- "$tmp"
 }
+
 export PATH="/usr/bin/python3:$PATH" 
-# export PATH="/usr/bin:$PATH" 
-# export PATH="/usr/local/bin:$PATH" 
-# export PATH="/home/thager/.local/bin:$PATH" 
+export PATH="/usr/bin:$PATH" 
+export PATH="/bin:$PATH" 
+export PATH="/usr/local/games:$PATH" 
+export PATH="/usr/local/bin:$PATH" 
+export PATH="/home/thager/.local/bin:$PATH" 
 
 # Use fd instead of fzf
 export FZF_DEFAULT_COMMAND="fd --hidden --strip-cwd-prefix --exclude .git"
