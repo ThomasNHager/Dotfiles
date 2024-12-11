@@ -83,6 +83,7 @@ plugins=(git)
 # source /home/thager/.oh-my-zsh/custom/plugins/zsh-vi-mode/zsh-vi-mode.plugin.zsh
 plugins+=(zsh-syntax-highlighting)
 plugins+=(zsh-autosuggestions)
+plugins+=(fzf-tab)
 
 source $ZSH/oh-my-zsh.sh
 # User configuration
