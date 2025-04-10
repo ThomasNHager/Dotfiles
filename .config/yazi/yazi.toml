@@ -4,7 +4,7 @@
 
 [manager]
 ratio          = [ 1, 4, 3 ]
-sort_by        = "modified"
+sort_by        = "mtime"
 sort_sensitive = false
 sort_reverse   = true
 sort_dir_first = true
@@ -74,6 +74,8 @@ rules = [
 	{ mime = "*/javascript", use = [ "edit", "reveal" ] },
 	# Empty file
 	{ mime = "inode/x-empty", use = [ "edit", "reveal" ] },
+	# .conf
+	{ name = "*.conf", use = ["edit", "open", "reveal"] },
 	# Fallback
 	{ name = "*", use = [ "open", "reveal" ] },
 ]
@@ -136,7 +138,7 @@ prepend_previewers = [
     { name = "*.ipynb", run = "rich-preview"}, # for jupyter notebooks (.ipynb)
     { name = "*.json", run = "rich-preview"}, # for json (.json) files
 #    { name = "*.lang_type", run = "rich-preview"} # for particular language files eg. .py, .go., .lua, etc.
-	{ name = "*/", run = "eza-preview" },
+	# { name = "*/", run = "eza-preview" },
 ]
 
 [input]
@@ -148,7 +150,7 @@ cd_origin = "top-center"
 cd_offset = [ 0, 2, 50, 3 ]
 
 # create
-create_title  = "Create:"
+create_title  = ["Create:", "Create (dir):"]
 create_origin = "top-center"
 create_offset = [ 0, 2, 50, 3 ]
 

@@ -1,5 +1,12 @@
-[plugin]
-deps = [{ use = "Reledia/miller", rev = "40e0265" }, { use = "pirafrank/what-size", rev = "f08f7f2" }]
+[[plugin.deps]]
+use = "Reledia/miller"
+rev = "40e0265"
+hash = ""
+
+[[plugin.deps]]
+use = "pirafrank/what-size"
+rev = "f08f7f2"
+hash = ""
 
 [flavor]
 deps = []

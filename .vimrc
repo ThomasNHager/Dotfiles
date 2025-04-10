@@ -56,6 +56,7 @@ Plugin 'wellle/context.vim' "Shows the current loop or funciton
 Plugin 'tpope/vim-commentary' "Allows for commenting with motions
 Plugin 'tpope/vim-unimpaired' "Adds some bracket mappings
 Plugin 'kristijanhusak/vim-carbon-now-sh' "Allows for sending code screenshots to carbon
+Plugin 'christoomey/vim-tmux-navigator' "Integration between Vim and tmux navigation
 
 "Asthetic
 Plugin 'junegunn/rainbow_parentheses.vim' "Colored parentheses
@@ -312,6 +313,15 @@ hi DiffChange   gui=none    guifg=NONE          guibg=#f9e2af
 hi DiffDelete   gui=bold    guifg=NONE          guibg=#eba0ac
 hi DiffText     gui=none    guifg=NONE          guibg=#89dceb
 
+"Set Y to y$
+nnoremap Y y$
+
+"Tmux configuration
+if !has('gui_running') && &term =~ '^\%(screen\|tmux\)'
+  let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+  let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+endif
+
 "Center cursor on half page moves
 "nnoremap <C-d> <C-d>zz
 "nnoremap <C-d> <C-d>zz
@@ -387,7 +397,8 @@ autocmd VimEnter * call g:VimCompleteOptionsSet(vcoptions)
 "Code Running
 " -------------------------
 "Vim Slime
-let g:slime_target = "vimterminal"
+let g:slime_target = "tmux"
+let g:slime_default_config = {"socket_name": "default", "target_pane": "{last}"}
 " let g:slime_python_ipython = 1
 
 "Nvimr
