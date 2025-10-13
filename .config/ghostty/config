@@ -1,0 +1,5 @@
+theme = catppuccin-mocha.conf
+window-decoration = false
+font-family = SauceCodeProNerdFontMono
+confirm-close-surface = false
+window-save-state = always

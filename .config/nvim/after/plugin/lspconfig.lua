@@ -1,0 +1,7 @@
+vim.lsp.enable('pyright')
+vim.lsp.enable('r_language_server')
+vim.lsp.enable('jdtls')
+vim.lsp.enable('bashls')
+vim.lsp.enable('sqlls')
+vim.lsp.enable('sqls')
+vim.lsp.enable('lua_ls')
