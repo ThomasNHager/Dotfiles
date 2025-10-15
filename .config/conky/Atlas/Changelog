@@ -1,0 +1,37 @@
+Changelog
+------------------------------
+Atlas - Conky Theme
+[ Taurus Themes Pack ] 
+
+by Closebox73
+
+Social
+X			: https://twitter.com/closebox73
+Discord		: https://discord.com/users/1115644269802311750
+Github		: https://github.com/closebox73
+Pling		: https://pling.com/u/closebox73x
+Mastodon	: https://mastodon.social/@closebox73
+------------------------------
+
+v2.4
+date : 02 Feb 2024
+-	New weather.sh
+-	Add line draw_blended in conky config due transparent image issue in Gnome & KDE
+-	Add Lisence file
+-	Slight change in config
+-	Add Fahrenheit version
+
+
+v2.0
+date : 21 Jan 2023
+-	Add override_utf8_locale line
+-	Rearrange config line
+-	Minimize archive size
+-	Little extra line in scripts
+-	Add Changelog file
+
+
+v1.0
+date : 25 May 2021
+-	Initial release
+
