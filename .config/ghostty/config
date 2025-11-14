@@ -3,3 +3,4 @@ window-decoration = false
 font-family = SauceCodeProNerdFontMono
 confirm-close-surface = false
 window-save-state = always
+maximize = true
