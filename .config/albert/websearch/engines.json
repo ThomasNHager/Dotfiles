@@ -72,6 +72,14 @@
         "url": "https://translate.google.com/?text=%s"
     },
     {
+        "fallback": true,
+        "iconPath": ":default",
+        "id": "c7c46bc9",
+        "name": "Kagi",
+        "trigger": "kg",
+        "url": "https://kagi.com/search?q=%s"
+    },
+    {
         "fallback": false,
         "iconPath": ":wolfram",
         "id": "3c69c1a2",
