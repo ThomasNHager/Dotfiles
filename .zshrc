@@ -119,7 +119,7 @@ fi
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 source ~/powerlevel10k/powerlevel10k.zsh-theme
 # alias kssh="kitty +kitten ssh"
-alias baloosearch6="baloosearch"
+# alias baloosearch6="baloosearch"
 # alias vim="/home/linuxbrew/.linuxbrew/Cellar/vim/9.1.0700/bin/vim"
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

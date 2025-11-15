@@ -64,7 +64,7 @@ enabled=true
 alwaysOnTop=true
 clearOnHide=false
 clientShadow=true
-darkTheme=Catppuccin_Custom
+darkTheme=Nord
 displayScrollbar=false
 followCursor=true
 hideOnFocusLoss=true
@@ -77,6 +77,7 @@ systemShadow=true
 [widgetsboxmodel-ng]
 alwaysOnTop=true
 clearOnHide=true
+darkTheme=Nord Dark
 displayScrollbar=false
 followCursor=true
 hideOnFocusLoss=true
