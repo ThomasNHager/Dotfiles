@@ -6,6 +6,7 @@ bash ~/.config/polybar/start.sh &
 bash /home/thager/.config/conky/Kurhah_1/start.sh &
 megasync &
 picom &
+dunst &
 
 pgrep -x sxhkd > /dev/null || sxhkd &
 
