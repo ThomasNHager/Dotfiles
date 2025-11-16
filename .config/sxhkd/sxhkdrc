@@ -37,6 +37,14 @@ super + Escape
 Print
     flameshot gui
 
+# Media control
+XF86Audio{Play,Prev,Next}
+    playerctl {play-pause,previous,next}
+
+# Volume control
+XF86Audio{Lower,Raise}Volume
+    amixer -q -D pulse sset Master 5%{-,+}
+
 # bspwm hotkeys
 #
 
