@@ -1,7 +1,7 @@
 {
   "R.nvim": { "branch": "main", "commit": "fef990378e4b5157f23314dca4136bc0079cc2c4" },
   "catppuccin": { "branch": "main", "commit": "da33755d00e09bff2473978910168ff9ea5dc453" },
-  "cmp": { "branch": "main", "commit": "62b4ee61bec7ece12a4ac0c7acc325ca118a886f" },
+  "cmp": { "branch": "main", "commit": "d97d85e01339f01b842e6ec1502f639b080cb0fc" },
   "cmp-dbee": { "branch": "main", "commit": "1650f67b9bf43c029fc37570665ca895a33cdf5a" },
   "cmp-r": { "branch": "main", "commit": "3b03cba13976b3ec5fcf7736bde02dacf89254b1" },
   "cmpbuffer": { "branch": "main", "commit": "b74fab3656eea9de20a9b8116afa3cfc4ec09657" },
