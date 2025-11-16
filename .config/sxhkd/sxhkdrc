@@ -13,6 +13,9 @@ alt + @space
 alt + shift + @space
     rofi -show window
 
+super + v
+    rofi-copyq
+
 # browser
 super + shift + i
     firefox
