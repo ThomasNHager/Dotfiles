@@ -1,4 +1,21 @@
-# See dunst(5) for all configuration options
+# See dunst(5) for all configuration options[global]
+[global]
+frame_color = "#89b4fa"
+separator_color= frame
+highlight = "#89b4fa"
+
+[urgency_low]
+background = "#1e1e2e"
+foreground = "#cdd6f4"
+
+[urgency_normal]
+background = "#1e1e2e"
+foreground = "#cdd6f4"
+
+[urgency_critical]
+background = "#1e1e2e"
+foreground = "#cdd6f4"
+frame_color = "#fab387"
 
 [global]
     ### Display ###
@@ -23,9 +40,9 @@
 
     # The width of the window, excluding the frame.
     # dynamic width from 0 to 300
-    # width = (0, 300)
+    width = (0, 300)
     # constant width of 300
-    width = 300
+    # width = 300
 
     # The height of a single notification, excluding the frame.
     # dynamic height from 0 to 300
@@ -111,7 +128,7 @@
     frame_width = 1
 
     # Defines color of the frame around the notification window.
-    frame_color = "#cba6f7"
+    # frame_color = "#cba6f7"
 
     # Size of gap to display between notifications - requires a compositor.
     # If value is greater than 0, separator_height will be ignored and a border
@@ -237,7 +254,7 @@
     min_icon_size = 32
 
     # Scale larger icons down to this size, set to 0 to disable
-    max_icon_size = 80
+    max_icon_size = 64
 
     # Paths to default icons (only necessary when not using recursive icon lookup)
     icon_path = /usr/share/icons/gnome/16x16/status/:/usr/share/icons/gnome/16x16/devices/
@@ -344,23 +361,26 @@
 [urgency_low]
     # IMPORTANT: colors have to be defined in quotation marks.
     # Otherwise the "#" and following would be interpreted as a comment.
-    background = "#181825"
-    foreground = "#cdd6f4"
+    # background = "#181825"
+    # foreground = "#cdd6f4"
+    # frame_color = "#74c7ec"
     timeout = 10
     # Icon for notifications with low urgency
     default_icon = dialog-information
 
 [urgency_normal]
-    background = "#74c7ec"
-    foreground = "#cdd6f4"
+    # background = "#181825"
+    # foreground = "#cdd6f4"
+    # frame_color = "#f9e2af"
     timeout = 10
-    override_pause_level = 30
+    # override_pause_level = 30
     # Icon for notifications with normal urgency
     default_icon = dialog-information
 
 [urgency_critical]
-    background = "#f38ba8"
-    foreground = "#cdd6f4"
+    # background = "#181825"
+    # foreground = "#cdd6f4"
+    frame_color = "#f38ba8"
     timeout = 0
     override_pause_level = 60
     # Icon for notifications with critical urgency
@@ -440,11 +460,11 @@
 #        If the notification is already drawn, it won't get undrawn.
 # pushback: same as delay, but when switching into fullscreen, the notification will get
 #           withdrawn from screen again and will get delayed like a new notification
-#[fullscreen_delay_everything]
-#    fullscreen = delay
-#[fullscreen_show_critical]
-#    msg_urgency = critical
-#    fullscreen = show
+[fullscreen_delay_everything]
+   fullscreen = delay
+[fullscreen_show_critical]
+   msg_urgency = critical
+   fullscreen = show
 
 #[espeak]
 #    summary = "*"

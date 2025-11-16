@@ -1,7 +1,7 @@
 {
   "R.nvim": { "branch": "main", "commit": "fef990378e4b5157f23314dca4136bc0079cc2c4" },
   "catppuccin": { "branch": "main", "commit": "da33755d00e09bff2473978910168ff9ea5dc453" },
-  "cmp": { "branch": "main", "commit": "d78fb3b64eedb701c9939f97361c06483af575e0" },
+  "cmp": { "branch": "main", "commit": "62b4ee61bec7ece12a4ac0c7acc325ca118a886f" },
   "cmp-dbee": { "branch": "main", "commit": "1650f67b9bf43c029fc37570665ca895a33cdf5a" },
   "cmp-r": { "branch": "main", "commit": "3b03cba13976b3ec5fcf7736bde02dacf89254b1" },
   "cmpbuffer": { "branch": "main", "commit": "b74fab3656eea9de20a9b8116afa3cfc4ec09657" },
@@ -15,7 +15,7 @@
   "highlightedyank": { "branch": "master", "commit": "285a61425e79742997bbde76a91be6189bc988fb" },
   "indent-blankline.nvim": { "branch": "master", "commit": "005b56001b2cb30bfa61b7986bc50657816ba4ba" },
   "lazy.nvim": { "branch": "main", "commit": "85c7ff3711b730b4030d03144f6db6375044ae82" },
-  "lspconfig": { "branch": "master", "commit": "c6f05c0900144f027a8a0332566878e398d457b5" },
+  "lspconfig": { "branch": "master", "commit": "abf6d190f2c06818489c0bd4b926e7e3a06c5e51" },
   "lualine.nvim": { "branch": "master", "commit": "3946f0122255bc377d14a59b27b609fb3ab25768" },
   "neoscroll.nvim": { "branch": "master", "commit": "f957373912e88579e26fdaea4735450ff2ef5c9c" },
   "netrw.nvim": { "branch": "master", "commit": "90501c62b9b816ed3ed1e912ae9db9af5671a1b2" },
