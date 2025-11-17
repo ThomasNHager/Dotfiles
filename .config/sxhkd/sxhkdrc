@@ -4,33 +4,45 @@
 
 # terminal emulator
 super + Return
-	ghostty
+	ghostty &
+
+super + shift + Return
+    wmctrl -F -x -a ghostty.com.mitchellh.ghostty
 
 # program launcher
-alt + @space
+# alt + @space
+super + @space
 	rofi -show drun
 
-alt + shift + @space
+# alt + shift + @space
+super + shift + @space
     rofi -show window
 
 super + v
     rofi-copyq
 
 # browser
+super + i
+    firefox &
+
 super + shift + i
-    firefox
+    wmctrl -F -x -a Navigator.firefox-esr
 
 # files
 super + shift + f
-    nautilus
+    wmctrl -F -x -a org.gnome.Nautilus.org.gnome.Nautilus || nautilus &
 
 # Spotify
 super + shift + s
-    spotify
+    wmctrl -F -x -a spotify.Spotify || spotify &
 
 # Discord
 super + shift + d
-    flatpak run com.discordapp.Discord   
+    wmctrl -F -x -a discord.discord || flatpak run com.discordapp.Discord &
+
+# Signal
+super + shift + g
+    wmctrl -F -x -a signal.Signal || signal-desktop &
 
 # make sxhkd reload its configuration files:
 super + Escape
@@ -38,7 +50,7 @@ super + Escape
 
 # Flameshot
 Print
-    flameshot gui
+    flameshot gui &
 
 # Media control
 XF86Audio{Play,Prev,Next}
@@ -114,8 +126,12 @@ super + {o,i}
 	bspc wm -h on
 
 # focus or send to the given desktop
-super + {_,shift + }{1-9,0}
+super + {_,ctrl + }{1-9,0}
 	bspc {desktop -f,node -d} '^{1-9,10}'
+
+# follow window to desktop
+super + shift + {1-9,0}
+    bspc node -d '^{1-9,10}' --follow
 
 #
 # preselect

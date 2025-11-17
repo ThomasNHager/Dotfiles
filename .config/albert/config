@@ -1,6 +1,6 @@
 [General]
 frontend=widgetsboxmodel
-hotkey=Alt+Space
+hotkey=Ctrl+Space
 telemetry=false
 
 [applications]
@@ -64,12 +64,13 @@ enabled=true
 alwaysOnTop=true
 clearOnHide=false
 clientShadow=true
-darkTheme=Nord
+darkTheme=Catppuccin_Custom
 displayScrollbar=false
 followCursor=true
 hideOnFocusLoss=true
 historySearch=true
 itemCount=5
+lightTheme=Catppuccin_Custom
 quitOnClose=false
 showCentered=true
 systemShadow=true
