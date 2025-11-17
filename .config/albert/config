@@ -1,6 +1,6 @@
 [General]
 frontend=widgetsboxmodel
-hotkey=Ctrl+Space
+hotkey=Alt+Space
 telemetry=false
 
 [applications]
@@ -36,7 +36,7 @@ paths=/home/thager
 enabled=true
 
 [python]
-enabled=false
+enabled=true
 
 [python.duckduckgo]
 enabled=false
@@ -45,7 +45,7 @@ enabled=false
 enabled=false
 
 [python.x_window_switcher]
-enabled=false
+enabled=true
 
 [snippets]
 enabled=false

@@ -44,6 +44,10 @@ super + shift + d
 super + shift + g
     wmctrl -F -x -a signal.Signal || signal-desktop &
 
+# Switch to the next instance of the focused app
+super + n
+    bash ~/Desktop/Scripts/findNextAppWindow.sh
+
 # make sxhkd reload its configuration files:
 super + Escape
 	pkill -USR1 -x sxhkd

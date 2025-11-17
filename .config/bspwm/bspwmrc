@@ -29,3 +29,4 @@ bspc rule -a megasync state=floating
 bspc rule -a MEGAsync state=floating
 bspc rule -a steam center=on rectangle=2040x1152+0+0 state=floating
 bspc rule -a steamwebhelper center=on rectangle=2040x1152+0+0 state=floating
+bspc rule -a albert state=floating border=off
