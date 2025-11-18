@@ -10,12 +10,10 @@ super + shift + Return
     wmctrl -F -x -a ghostty.com.mitchellh.ghostty
 
 # program launcher
-# alt + @space
-super + @space
+alt + @space
 	rofi -show drun
 
-# alt + shift + @space
-super + shift + @space
+alt + shift + @space
     rofi -show window
 
 super + v
