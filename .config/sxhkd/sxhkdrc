@@ -14,7 +14,7 @@ alt + @space
 	rofi -show drun
 
 alt + shift + @space
-    rofi -show window
+    rofi -show calc
 
 super + v
     rofi-copyq

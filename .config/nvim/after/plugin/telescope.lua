@@ -1,3 +1,11 @@
+require('telescope').setup{
+  defaults = {
+    layout_strategy = 'flex',
+    layout_config = {
+        flip_columns = 160
+    },
+  },
+}
 local builtin = require('telescope.builtin')
 vim.keymap.set('n', '<leader>f', builtin.find_files, { desc = 'Telescope find files' })
 vim.keymap.set('n', '<leader>b', builtin.buffers, { desc = 'Telescope buffers' })
