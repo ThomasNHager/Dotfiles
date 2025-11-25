@@ -40,7 +40,7 @@ super + shift + d
 
 # Signal
 super + shift + g
-    wmctrl -F -x -a signal.Signal || signal-desktop &
+    wmctrl -F -x -a signal.Signal || signal-desktop --password-store="gnome-libsecret" &
 
 # Switch to the next instance of the focused app
 super + n
