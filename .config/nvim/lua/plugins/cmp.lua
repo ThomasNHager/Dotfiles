@@ -4,7 +4,7 @@ return{
     { "hrsh7th/cmp-path", name = "cmppath" },
     { "hrsh7th/cmp-cmdline", name = "cmpcmdline" },
     { "hrsh7th/nvim-cmp", name = "cmp" },
-    { 'R-nvim/cmp-r', name = "cmp-r" },
+    -- { 'R-nvim/cmp-r', name = "cmp-r" },
     {
         "hrsh7th/nvim-cmp",
         dependencies = {

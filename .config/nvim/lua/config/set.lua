@@ -91,8 +91,9 @@ vim.g.netrw_preview = 1
 -- 4 : act like "P" (ie. open previous window)
 vim.g.netrw_browse_split = 0
 
--- Split on the left
+-- Set netrw to open previews to the right of the tree
 vim.g.netrw_preview = 1
+vim.g.netrw_alto = 0
 
 -- Highlight marked files in the same way search matches are
 vim.cmd("hi! link netrwMarkFile Search")

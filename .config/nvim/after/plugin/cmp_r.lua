@@ -1,1 +1,1 @@
-require("cmp_r").setup({})
+-- require("cmp_r").setup({})
