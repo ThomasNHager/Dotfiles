@@ -28,3 +28,6 @@ vim.keymap.set("n", "<leader>p", "\"+p")
 vim.keymap.set("n", "<leader>P", "\"+P")
 
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
+
+-- Toggle Netrw on the left side
+vim.keymap.set('n', '<leader>t', ':Lexplore<CR>', { silent = true, desc = 'Toggle Netrw' })

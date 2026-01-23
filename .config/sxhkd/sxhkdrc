@@ -46,6 +46,10 @@ super + shift + g
 super + n
     bash ~/Desktop/Scripts/findNextAppWindow.sh
 
+# Center the focused window if it's floating
+super + shift + n
+    bash ~/Desktop/Scripts/centerFocusedWindow.sh
+
 # make sxhkd reload its configuration files:
 super + Escape
 	pkill -USR1 -x sxhkd

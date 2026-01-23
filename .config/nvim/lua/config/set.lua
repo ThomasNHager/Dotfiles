@@ -50,7 +50,7 @@ vim.g.have_nerd_font = true
 
 -- Netew winsize
 -- @default = 20
-vim.g.netrw_winsize = 15
+vim.g.netrw_winsize = -30
 
 -- Netrw banner
 -- 0 : Disable banner
@@ -94,6 +94,7 @@ vim.g.netrw_browse_split = 0
 -- Set netrw to open previews to the right of the tree
 vim.g.netrw_preview = 1
 vim.g.netrw_alto = 0
+vim.g.netrw_altv = 1
 
 -- Highlight marked files in the same way search matches are
 vim.cmd("hi! link netrwMarkFile Search")
@@ -107,5 +108,5 @@ vim.opt.foldmethod = "expr"
 vim.opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"
 vim.opt.foldtext = ""
 vim.opt.foldlevel = 99
-vim.opt.foldlevelstart = 1
+-- vim.opt.foldlevelstart = 2
 vim.opt.foldnestmax = 4
