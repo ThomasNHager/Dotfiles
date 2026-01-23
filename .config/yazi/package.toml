@@ -9,9 +9,19 @@ rev = "f08f7f2"
 hash = ""
 
 [[plugin.deps]]
+use = "KKV9/compress"
+rev = "13e89fb"
+hash = "b6e2e69e13ba419f68140910900cbbcd"
+
+[[plugin.deps]]
+use = "orhnk/system-clipboard"
+rev = "888026c"
+hash = "9f82a544335a53d79e87ea315746caaa"
+
+[[plugin.deps]]
 use = "AnirudhG07/rich-preview"
-rev = "843c3fa"
-hash = "b4040931f0d2f9670ddb4923e55cd881"
+rev = "573b275"
+hash = "c3e2871c9ef244fd181f203791f9b0d2"
 
 [flavor]
 deps = []
