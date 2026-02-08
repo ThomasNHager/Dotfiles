@@ -9,6 +9,8 @@ picom &
 dunst &
 copyq &
 caffeine-indicator &
+# Set mouse sensitivity
+xinput set-prop 10 'libinput Accel Speed' -0.5
 
 pgrep -x sxhkd > /dev/null || sxhkd &
 

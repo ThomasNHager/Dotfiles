@@ -53,7 +53,7 @@ frame_color = "#fab387"
     #       and the given value is treated as the maximum height
 
     # Position the notification in the top right corner
-    origin = top-left
+    origin = top-right
 
     # Offset from the origin
     # NOTE: Dunst from version 1.11 and older use this alternative notation
