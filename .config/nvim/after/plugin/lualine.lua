@@ -1,6 +1,6 @@
 require("lualine").setup({
 	options = {
-		theme = "catppuccin",
+		-- theme = "catppuccin",
 		section_separator = "",
 		components_separator = "",
 		icons_enabled = true,

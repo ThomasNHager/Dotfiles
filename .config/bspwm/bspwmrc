@@ -2,13 +2,22 @@
 
 # Startup scripts
 xrandr --output DP-0 --rotate left --right-of HDMI-0 &
+picom &
+bash /home/thager/.screenlayout/twoMontior.sh &
 bash ~/.config/polybar/start.sh &
 bash /home/thager/.config/conky/Kurhah_1/start.sh &
 megasync &
-picom &
 dunst &
 copyq &
 caffeine-indicator &
+
+# Startup applications
+# bspc rule -a Firefox -o desktop='^1' && sleep 2 && firefox &
+# bspc rule -a Ghostty -o desktop='^2' && sleep 2 && ghostty &
+# bspc rule -a Discord -o desktop='^6' && sleep 2 && flatpak run com.discordapp.Discord &
+# bspc rule -a Spotify -o desktop='^7' && sleep 2 && spotify &
+# bspc rule -a Signal -o desktop='^8' && sleep 2 && signal-desktop --password-store="gnome-libsecret" &
+
 # Set mouse sensitivity
 xinput set-prop 10 'libinput Accel Speed' -0.5
 
@@ -33,3 +42,4 @@ bspc rule -a MEGAsync state=floating
 bspc rule -a steam center=on state=floating
 bspc rule -a steamwebhelper center=on state=floating
 bspc rule -a albert state=floating border=off
+feh --bg-fill ~/Desktop/Backgrounds/jellyfish.jpg &

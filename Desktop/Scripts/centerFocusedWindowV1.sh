@@ -1,20 +1,15 @@
 #!/bin/sh
+
 if [ $(bspc query --node focused.floating.\!hidden.window.local --nodes | wc -l) -gt 0 ]; then
     floatwininfo=$(bspc query --node focused.floating.\!hidden.window.local --tree)
     floatwinxcoords=$(echo "$floatwininfo" | cut -d ":" -f38 | cut -d "," -f1)
     floatwinycoords=$(echo "$floatwininfo" | cut -d ":" -f39 | cut -d "," -f1)
     floatwinwidth=$(echo "$floatwininfo" | cut -d ":" -f40 | cut -d "," -f1)
     floatwinheight=$(echo "$floatwininfo" | cut -d ":" -f41 | tr -d "}")
-
     monitorinfo=$(bspc query --monitor focused --tree)
-    monitorx=$(echo "$monitorinfo" | cut -d ":" -f16 | cut -d "," -f1)
-    monitory=$(echo "$monitorinfo" | cut -d ":" -f17 | cut -d "," -f1)
     monitorwidth=$(echo "$monitorinfo" | cut -d ":" -f18 | cut -d "," -f1)
     monitorheight=$(echo "$monitorinfo" | cut -d ":" -f19 | cut -d "," -f1 | tr -d "}")
-
-    bspc node -v \
-        $(( ($monitorx + $monitorwidth/2) - $floatwinxcoords - ($floatwinwidth/2) )) \
-        $(( ($monitory + $monitorheight/2) - $floatwinycoords - ($floatwinheight/2) ))
+    bspc node -v $(( ($monitorwidth/2) - $floatwinxcoords - ($floatwinwidth/2) )) $(( ($monitorheight/2) - $floatwinycoords - ($floatwinheight/2) ))
 else
     notify-send -u low "BSPWM" "No Floating Window\nis Currently Focused"
 fi
