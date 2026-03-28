@@ -9,6 +9,7 @@ bash /home/thager/.config/conky/Kurhah_1/start.sh &
 megasync &
 dunst &
 copyq &
+caffeine &
 caffeine-indicator &
 
 # Startup applications

@@ -1,6 +1,7 @@
 configuration{
     modi: "drun,window,calc";
 	  font: "SauceCodeProNerdFontMono 12";
+    monitor: "-2";
     icon-theme: "Oranchelo";
     show-icons: true;
     terminal: "ghostty";
