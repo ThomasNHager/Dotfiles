@@ -5,3 +5,6 @@ brew update
 brew upgrade
 
 flatpak update
+
+bash ~/Desktop/Scripts/SignalTheme.sh
+betterdiscordctl -i flatpak install
