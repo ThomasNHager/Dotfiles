@@ -31,3 +31,7 @@ vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 
 -- Toggle Netrw on the left side
 vim.keymap.set('n', '<leader>t', ':Lexplore<CR>', { silent = true, desc = 'Toggle Netrw' })
+
+-- Turn * into a motion
+vim.keymap.set("o", "*", function()  return "\x1b*N" ..
+    vim.v.operator .. "gn" end, { expr = true })

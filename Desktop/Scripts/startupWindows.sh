@@ -24,6 +24,7 @@ assign_to_desktop() {
 # Launch all apps
 firefox &
 ghostty &
+flatpak run com.valvesoftware.Steam &
 flatpak run com.discordapp.Discord &
 spotify &
 signal-desktop --password-store="gnome-libsecret" &
@@ -31,6 +32,7 @@ signal-desktop --password-store="gnome-libsecret" &
 # Assign to desktops (runs in parallel)
 assign_to_desktop "Firefox"  1 &
 assign_to_desktop "Ghostty"  2 &
+assign_to_desktop "Steam" 3 60 &
 assign_to_desktop "Discord"  6 60 &  # extra timeout for Discord's slow launch
 assign_to_desktop "Spotify"  7 &
 assign_to_desktop "Signal"   8 &
