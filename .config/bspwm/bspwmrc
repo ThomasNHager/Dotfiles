@@ -9,8 +9,8 @@ bash /home/thager/.config/conky/Kurhah_1/start.sh &
 megasync &
 dunst &
 copyq &
-caffeine &
 caffeine-indicator &
+caffeine &
 
 # Startup applications
 # bspc rule -a Firefox -o desktop='^1' && sleep 2 && firefox &
