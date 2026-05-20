@@ -1,5 +1,6 @@
 #! /bin/sh
 
+
 # Startup scripts
 xrandr --output DP-0 --rotate left --right-of HDMI-0 &
 picom &
@@ -20,7 +21,8 @@ caffeine &
 # bspc rule -a Signal -o desktop='^8' && sleep 2 && signal-desktop --password-store="gnome-libsecret" &
 
 # Set mouse sensitivity
-xinput set-prop 10 'libinput Accel Speed' -0.5
+# xinput set-prop 10 'libinput Accel Speed' -0.5
+xinput set-prop 14 'libinput Accel Speed' -0.5
 
 pgrep -x sxhkd > /dev/null || sxhkd &
 

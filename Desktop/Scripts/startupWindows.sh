@@ -25,7 +25,8 @@ assign_to_desktop() {
 firefox &
 ghostty &
 flatpak run com.valvesoftware.Steam &
-flatpak run com.discordapp.Discord &
+# flatpak run com.discordapp.Discord &
+vesktop &
 spotify &
 signal-desktop --password-store="gnome-libsecret" &
 
