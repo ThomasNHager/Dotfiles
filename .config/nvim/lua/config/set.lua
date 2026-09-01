@@ -2,6 +2,10 @@
 vim.opt.nu = true
 vim.opt.relativenumber = true
 
+-- Set line numbers to be visible during the day
+vim.api.nvim_set_hl(0, "LineNrAbove", { fg = "#9399b2" })
+vim.api.nvim_set_hl(0, "LineNrBelow", { fg = "#9399b2" })
+
 -- Set indent to 4 spaces
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
